@@ -46,3 +46,27 @@ That said, stuff that would be great to do is:
  * Pull items such as alignment pin locations into `cherryplate.scad`
  * Maybe an (external, Python or such) converter from www.keyboard-layout-editor.com layouts to my internal format
  * Contribute other layouts
+
+# Bill of Material
+
+*This bill of material is a work in progress.  Verify it yourself, don't order blindly*
+
+(These are not affiliate links, but I do work for Adafruit)
+
+| Item | Qty | Link | Comments |
+|--|--|--|--|
+| Filament | 400g | | I use PLA |
+| Keyswitches | 87 | | I'm using Kailh Purple |
+| Costar Plate Mounted Clips | 2 * 5 | wasdkeyboards.com | |
+| Costar Keycap Stabilizer Insert | 2 * 5 | wasdkeyboards.com | |
+| Costar Stabilizer Spring for 2x+ Keycaps | 4 * 5 | wasdkeyboards.com | |
+| Costar Stabilizer Spring for Spacebar | 1 | wasdkeyboards.com | |
+| M3 threaded inserts | 12 | mcmaster.com | |
+| M2 threaded inserts | 12 | mcmaster.com | |
+| M3 x 8 screws | 12 | | |
+| M2 x 6 screws | 12 | | |
+| Neopixel strips | 4 | adafruit.com | |
+| Feather nRF52840 | 1 | adafruit.com | |
+| 1200mAh Li-Ion Battery | 1 | adafruit.com | |
+| seesaw I/O expander | 1 | adafruit.com | |
+| panel mount micro USB connector | 1 | adafruit.com | |
