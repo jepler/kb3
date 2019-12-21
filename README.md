@@ -55,18 +55,18 @@ That said, stuff that would be great to do is:
 
 | Item | Qty | Link | Comments |
 |--|--|--|--|
-| Filament | 400g | | I use PLA |
+| Filament | ~400g | | I used PLA |
 | Keyswitches | 87 | | I'm using Kailh Purple |
-| Costar Plate Mounted Clips | 2 * 5 | wasdkeyboards.com | |
-| Costar Keycap Stabilizer Insert | 2 * 5 | wasdkeyboards.com | |
-| Costar Stabilizer Spring for 2x+ Keycaps | 4 * 5 | wasdkeyboards.com | |
-| Costar Stabilizer Spring for Spacebar | 1 | wasdkeyboards.com | |
-| M3 threaded inserts | 12 | mcmaster.com | |
-| M2 threaded inserts | 12 | mcmaster.com | |
+| Costar Plate Mounted Clips | 2 * 5 | https://www.wasdkeyboards.com/cherry-mx-plate-mounted-stabilizer-clips-2pcs.html | |
+| Costar Keycap Stabilizer Insert | 2 * 5 | https://www.wasdkeyboards.com/cherry-mx-keycap-stabilizer-insert-2pcs.html | |
+| Costar Stabilizer Spring for 2x+ Keycaps | 4 * 5 | https://www.wasdkeyboards.com/cherry-mx-stabilizer-spring-for-2x-keycaps.html | |
+| Costar Stabilizer Spring for Spacebar | 1 | https://www.wasdkeyboards.com/cherry-mx-stabilizer-spring-for-spacebar.html | |
+| M3 threaded inserts | 12 | https://www.mcmaster.com/94459A130 | |
+| M2 threaded inserts | 12 | https://www.mcmaster.com/94459A120 | |
 | M3 x 8 screws | 12 | | |
 | M2 x 6 screws | 12 | | |
-| Neopixel strips | 4 | adafruit.com | |
-| Feather nRF52840 | 1 | adafruit.com | |
-| 1200mAh Li-Ion Battery | 1 | adafruit.com | |
-| seesaw I/O expander | 1 | adafruit.com | |
-| panel mount micro USB connector | 1 | adafruit.com | |
+| Neopixel strips | 4 | https://www.adafruit.com/product/1426 | |
+| Feather nRF52840 Express | 1 | https://www.adafruit.com/product/4062 | |
+| 2000mAh Li-Ion Battery | 1 | https://www.adafruit.com/product/2011 | |
+| Adafruit ATSAMD09 Breakout with seesaw | 1 | https://www.adafruit.com/product/3657 | |
+| panel mount micro USB connector | 1 | https://www.adafruit.com/product/3258 | |
