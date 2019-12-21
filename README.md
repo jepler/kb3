@@ -2,7 +2,8 @@
 
 I was inspired by [the SiCK-68 keyboard on thingiverse](https://www.thingiverse.com/thing:3478494), but I favor the tenkeyless layout.
 In particular, switching between the SiCK-68 and a TKL is difficult because of the compromise in placement of the escape key.
-I realized that with a similar "two halves" design, 
+I realized that with a similar "two halves" design, I could print a full tenkeyless layout on my printer, but just barely.
+That's when I started my own 3d printable keyboard design in OpenSCAD.
 
 ![3D Rendering](tkl.png)
 
