@@ -4,6 +4,8 @@ I was inspired by [the SiCK-68 keyboard on thingiverse](https://www.thingiverse.
 In particular, switching between the SiCK-68 and a TKL is difficult because of the compromise in placement of the escape key.
 I realized that with a similar "two halves" design, 
 
+![3D Rendering](tkl.png)
+
 # Mechanicals
 
 Aperture sizes are taken from direct measurements, from mechanical drawings of Cherry MX and Kailh keyswitches, and from the excellent (if somewhat bitrotted) [kad](https://github.com/swill/kad) program.
