@@ -8,6 +8,8 @@ use <cherryplate.scad>
 
 module tkl() {
     let(
+    $pin_l = 25,
+    $pin_d = 4,
     $cells_x = 18.5,
     $cells_y = 6.5,
 
@@ -43,34 +45,35 @@ module base_cb() {
 echo ("num_holes", $num_holes);
         ovl_x = IN(.75 * $cells_x) + 2*$wall;
         ovl_y = IN(.75 * $cells_y) + 2*$wall;
+        // Alignment pins for the left and right halves
         if($stage == 1)  {
             translate([ovl_x * .5 - $wall, -.5*$wall, -$min_h/2-1])
             rotate([0,90,0])
-            cylinder(d=3, h=16, center=true);
+            cylinder(d=$pin_d, h=$pin_l, center=true);
 
             translate([ovl_x * .5 - $wall, ovl_y-1.5*$wall, -$min_h/2-1])
             rotate([0,90,0])
-            cylinder(d=3, h=16, center=true);
+            cylinder(d=$pin_d, h=$pin_l, center=true);
 
             translate([ovl_x * .5 - $wall, ovl_y-1.5*$wall, -$min_h/2 + 8])
             rotate([0,90,0])
-            cylinder(d=3, h=16, center=true);
+            cylinder(d=$pin_d, h=$pin_l, center=true);
         }
         if($stage == 0 || $stage == 1) {
-            translate([ovl_x/2 - IN(1), ovl_y - IN(2), -$min_h])
+            translate([ovl_x/2 - IN(1.5), ovl_y - IN(2), -$min_h])
             post_board(IN(.7), IN(1.8), 5, $stage == 1);
-            for(x=[IN(1), ovl_x-IN(1)])
+            for(x=[IN(.5), ovl_x-IN(.5)-2*$wall])
             translate([x, ovl_y/2, -$min_h])
             rotate(90)
             post_neopixel(5, $stage == 1);
 
             for(x=[ovl_x/2 - IN(3), ovl_x/2 + IN(3)])
-            translate([x, IN(1), -$min_h])
+            translate([x, IN(.5), -$min_h])
             post_neopixel(5, $stage == 1);
         }
         // seesaw is 1.3" x 0.5"
         if($stage == 0) {
-            translate([ovl_x/2 + IN(1), ovl_y-IN(2), -$min_h-1])
+            translate([ovl_x/2 + IN(2), ovl_y-IN(2), -$min_h-1])
             rotate(90)
             clip_seesaw();
         }
@@ -112,7 +115,7 @@ echo ("num_holes", $num_holes);
             // tip to tip (with approx 10" cabling between connectors).
 
             
-            translate([25, IN(.75*$cells_y)+$wall-2, -9])
+            translate([45, IN(.75*$cells_y)+$wall-2, -9])
             rotate(180)
             rotate([90,0,0])
             panelmicrob_void(12, 12);
@@ -125,11 +128,11 @@ module keeb_cb() {
     if($stage == 1) {
             translate([ovl_x * .5 - $wall, -.5*$wall, .5*$wall])
             rotate([0,90,0])
-            cylinder(d=3, h=16, center=true);
+            cylinder(d=$pin_d, h=$pin_l, center=true);
 
             translate([ovl_x * .5 - $wall + IN(.75*.25), ovl_y-1.5*$wall, .5*$wall])
             rotate([0,90,0])
-            cylinder(d=3, h=16, center=true);
+            cylinder(d=$pin_d, h=$pin_l, center=true);
     }
 }
 
