@@ -150,7 +150,7 @@ m3_counterbore_h = 2.5;
 m3_threaded_insert = 3.9;
 m2_threaded_insert = 3.3;
 $angle = 3.5;
-$min_h = 8;
+$min_h = 13;
 function max_h() = $min_h + sin($angle) * (IN(.85*$cells_y) + 2*$wall);
 $floor = 2;
 
