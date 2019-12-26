@@ -54,16 +54,16 @@ module void_keyswitch() {
 // 1x7: A = 4.5
 // 1x8, ..., 10: A = 5.25
 
-$costar_stabilizer_offset_y = 0.65;
-$costar_stabilizer_width = 3.3;
+$costar_stabilizer_offset_y = -0.65;
+$costar_stabilizer_width = 3.3 + .1;
 $costar_stabilizer_height = 14.2;
-$costar_offset_layer = 3;
+$costar_offset_layer = 5;
 // kad uses +-1.65 in X and -6.45+7.75 for costar stabilizers
 module void_keyswitch_stabilizer(A, B=0) {
     void_keyswitch();
 
     for(dx = [-A, A]) {
-        translate([-dx, 0.65]) {
+        translate([-dx, $costar_stabilizer_offset_y]) {
             square([$costar_stabilizer_width, $costar_stabilizer_height+$costar_offset_layer*$layer], center=true);
         }
     }
