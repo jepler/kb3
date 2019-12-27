@@ -8,7 +8,7 @@ use <cherryplate.scad>
 
 module tkl() {
     let(
-    $min_h = 13, // measured protrusion of switch 4mm, min_h = 8 let battery just clear plate, 1 more for slop/flex
+    $min_h = 8, // measured protrusion of switch 4mm, min_h = 8 let battery just clear plate, 1 more for slop/flex
 
     $pin_l = 25,
     $pin_d = 4,
@@ -109,7 +109,7 @@ echo ("num_holes", $num_holes);
             // tip to tip (with approx 10" cabling between connectors).
 
             
-            translate([45, IN(.75*$cells_y)+$wall-2, -14])
+            translate([45, IN(.75*$cells_y)+$wall-2, -9])
             rotate(180)
             rotate([90,0,0])
             panelmicrob_void(12, 12);

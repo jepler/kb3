@@ -150,8 +150,7 @@ m3_counterbore_h = 2.5;
 m3_threaded_insert = 3.9;
 m2_threaded_insert = 3.2;
 $angle = 3.5;
-$min_h = 13;
-function max_h() = $min_h + sin($angle) * (IN(.85*$cells_y) + 2*$wall);
+$min_h = 8;
 $floor = 2;
 
 module m3_screw_counterbore(len, counterbore_depth=m3_counterbore_h) {
@@ -240,8 +239,9 @@ module base0() {
                 cube(1000, center=true);
             }
             shear_yz(-tan($angle))
-            translate([0, 0, -$min_h]) {
-                linear_extrude(height=max_h(), convexity=6) base_outline();
+            translate([0, 0, -$min_h-.001]) {
+                max_h = $min_h + sin($angle) * (IN(.85*$cells_y) + 2*$wall);
+                linear_extrude(height=max_h, convexity=6) base_outline();
 
                 translate([0,0,-$floor])
                 scale([1, 1/cos($angle), 1])
