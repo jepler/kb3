@@ -86,7 +86,7 @@ echo ("num_holes", $num_holes);
                     translate([s[0], s[1], 0] * IN(.75))
                     rotate(s[2])
                     translate([-6,-1,-24])
-                    linear_extrude(height=24)
+                    linear_extrude(height=24, convexity=2)
                     union() {
                         square([12, 2]);
                         translate([4.5,0])
