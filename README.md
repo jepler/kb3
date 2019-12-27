@@ -19,10 +19,9 @@ A [panel-mount USB connector](https://www.adafruit.com/product/3258) is used, in
 # Electronics
 
 This isn't done yet :)
-The tenkeyless layout needs about 23 I/Os for the "obvious" but inefficient matrix.
-My other internal requirements are bluetooth and CircuitPython, but the nRF52840 Feather doesn't have enough I/Os.
-For now I am planning to use the Feather plus a "seesaw" I/O expander board.
-There is also a provision for several neopixel sticks for backlighting (but not per-key lighting)
+The tenkeyless layout needs 23 I/Os for the "obvious" but inefficient matrix.
+This can be dropped by 1 column pretty easily, allowing one pin left over
+on an Itsy Bitsy (M4, M0, or AVR 32u4, not the upcoming nRF52840)
 
 # Software
 
@@ -36,7 +35,9 @@ However, as far as I've discovered, there aren't any libraries on top of that to
 
 # Status
 
-See the issues page for items I know need to be worked on
+See the issues page for items I know need to be worked on.
+
+I think the 3D parts are complete.
 
 # Contributing
 
@@ -61,12 +62,11 @@ That said, stuff that would be great to do is:
 | Costar Keycap Stabilizer Insert | 2 * 5 | https://www.wasdkeyboards.com/cherry-mx-keycap-stabilizer-insert-2pcs.html | |
 | Costar Stabilizer Spring for 2x+ Keycaps | 4 * 5 | https://www.wasdkeyboards.com/cherry-mx-stabilizer-spring-for-2x-keycaps.html | |
 | Costar Stabilizer Spring for Spacebar | 1 | https://www.wasdkeyboards.com/cherry-mx-stabilizer-spring-for-spacebar.html | |
-| M3 threaded inserts | 12 | https://www.mcmaster.com/94459A130 | |
-| M2 threaded inserts | 12 | https://www.mcmaster.com/94459A120 | |
+| M3 x 4mm threaded inserts | 12 | https://www.mcmaster.com/94459A130 | |
+| M2 x 2.5mm threaded inserts | 12 | https://www.mcmaster.com/94459A110 | |
 | M3 x 8 screws | 12 | | |
-| M2 x 6 screws | 12 | | |
+| M2 x 6 screws | 8 | | |
 | Neopixel strips | 4 | https://www.adafruit.com/product/1426 | |
-| Feather nRF52840 Express | 1 | https://www.adafruit.com/product/4062 | |
-| 2000mAh Li-Ion Battery | 1 | https://www.adafruit.com/product/2011 | |
-| Adafruit ATSAMD09 Breakout with seesaw | 1 | https://www.adafruit.com/product/3657 | |
+| Itsy Bitsy M4 Express | 1 | https://www.adafruit.com/product/3800 | Or 32u4 or M0 |
 | panel mount micro USB connector | 1 | https://www.adafruit.com/product/3258 | |
+| Wiring | | | |
