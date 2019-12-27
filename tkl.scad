@@ -62,8 +62,6 @@ echo ("num_holes", $num_holes);
             cylinder(d=$pin_d, h=$pin_l, center=true);
         }
         if($stage == 0 || $stage == 1) {
-            translate([ovl_x/2 - IN(1.5), ovl_y - IN(2), -$min_h])
-            post_board(IN(.7), IN(1.8), 5, $stage == 1);
             for(x=[IN(.5), ovl_x-IN(.5)-2*$wall])
             translate([x, ovl_y/2, -$min_h])
             rotate(90)
@@ -73,17 +71,11 @@ echo ("num_holes", $num_holes);
             translate([x, IN(.5), -$min_h])
             post_neopixel(5, $stage == 1);
         }
-        // seesaw is 1.3" x 0.5"
+        // itsy bitsy is 1.4 x .7
         if($stage == 0) {
-            translate([ovl_x/2 + IN(2), ovl_y-IN(2), -$min_h-1])
+            translate([ovl_x/2 - IN(2), ovl_y-IN(2), -$min_h-1])
             rotate(90)
-            clip_seesaw();
-        }
-        // battery is 60x36x7 mm
-        if($stage == 0) {
-            translate([ovl_x/2 - IN(4), ovl_y-IN(2), -$min_h-2])
-            rotate(90)
-            clip_board(60, 36, 8);
+            clip_itsybitsy(1.2);
         }
         // Anti-bowing posts
         if($stage == 2) {

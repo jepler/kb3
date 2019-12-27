@@ -348,25 +348,25 @@ module minimal() {
     children();
 }
 
-module clip_post(zz=2) {
+module clip_post(zz=2, hh=2) {
     rotate([90,0,0])
-    linear_extrude(height=3, center=true)
+    linear_extrude(height=3, center=true, convexity=3)
     polygon([
         [1, 0], 
-        [1, 3],
-        [0, 3],
-        [0, 3+zz],
-        [1, 4+zz],
-        [-1, 5+zz],
+        [1, hh],
+        [0, hh],
+        [0, hh+zz],
+        [1, hh+1+zz],
+        [-1, hh+2+zz],
         [-2, 0]
     ]);
 }
 
-module clip_board(xx, yy, zz=2) {
-    translate([-xx/2, -yy/2]) rotate(45) clip_post(zz);
-    translate([ xx/2, -yy/2]) rotate(135) clip_post(zz);
-    translate([ xx/2,  yy/2]) rotate(-135) clip_post(zz);
-    translate([-xx/2,  yy/2]) rotate(-45) clip_post(zz);
+module clip_board(xx, yy, zz=2, hh=2) {
+    translate([-xx/2, -yy/2]) rotate(45) clip_post(zz, hh);
+    translate([ xx/2, -yy/2]) rotate(135) clip_post(zz, hh);
+    translate([ xx/2,  yy/2]) rotate(-135) clip_post(zz, hh);
+    translate([-xx/2,  yy/2]) rotate(-45) clip_post(zz, hh);
 }
 
 module post_board(x, y, h, do_void) {
