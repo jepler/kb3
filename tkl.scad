@@ -120,7 +120,7 @@ module keeb_cb() {
     ovl_x = IN(.75 * $cells_x) + 2*$wall;
     ovl_y = IN(.75 * $cells_y) + 2*$wall;
     if($stage == 1) {
-            translate([ovl_x * .5 - $wall, -.5*$wall, .5*$wall])
+            translate([ovl_x * .5 + IN(.75*.5) - $wall, -.5*$wall, .5*$wall])
             rotate([0,90,0])
             cylinder(d=$pin_d, h=$pin_l, center=true);
 
