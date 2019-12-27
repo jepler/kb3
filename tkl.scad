@@ -65,11 +65,11 @@ echo ("num_holes", $num_holes);
             for(x=[IN(.5), ovl_x-IN(.5)-2*$wall])
             translate([x, ovl_y/2, -$min_h])
             rotate(90)
-            post_neopixel(5, $stage == 1);
+            post_neopixel(3, $stage == 1);
 
             for(x=[ovl_x/2 - IN(3), ovl_x/2 + IN(3)])
             translate([x, IN(.5), -$min_h])
-            post_neopixel(5, $stage == 1);
+            post_neopixel(3, $stage == 1);
         }
         // itsy bitsy is 1.4 x .7
         if($stage == 0) {

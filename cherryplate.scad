@@ -148,7 +148,7 @@ m3_clearance = 3.6;
 m3_counterbore_dia = 5.7;
 m3_counterbore_h = 2.5;
 m3_threaded_insert = 3.9;
-m2_threaded_insert = 3.3;
+m2_threaded_insert = 3.2;
 $angle = 3.5;
 $min_h = 13;
 function max_h() = $min_h + sin($angle) * (IN(.85*$cells_y) + 2*$wall);
@@ -265,9 +265,9 @@ module m2_insert_riser(h, do_void) {
 module m3_insert_riser(h, do_void) {
     if(do_void) {
         translate([0,0,-.5])
-        cylinder(d=m3_threaded_insert, h=h+2);
+        cylinder(d=m2_threaded_insert, h=h+2);
     } else {
-        cylinder(d=m3_threaded_insert + 3, h=h);
+        cylinder(d=m2_threaded_insert + 3, h=h);
     }
 }
 
@@ -377,11 +377,12 @@ module post_board(x, y, h, do_void) {
 }
 
 module clip_seesaw() { clip_board(IN(1.3), IN(0.5)); }
+module clip_itsybitsy(hh) { clip_board(IN(1.4), IN(0.7), hh=hh); }
 module post_neopixel(h, do_void) {
     translate([IN(-.5), IN(.06)])
-    m3_insert_riser(h, do_void);
+    m2_insert_riser(h, do_void);
     translate([IN(.5), IN(.06)])
-    m3_insert_riser(h, do_void);
+    m2_insert_riser(h, do_void);
 }
 
 minimal() { 
