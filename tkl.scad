@@ -10,7 +10,7 @@ module tkl() {
     let(
     $min_h = 8, // measured protrusion of switch 4mm, min_h = 8 let battery just clear plate, 1 more for slop/flex
 
-    $pin_l = 25,
+    $pin_l = 20,
     $pin_d = 4,
     $cells_x = 18.5,
     $cells_y = 6.5,
